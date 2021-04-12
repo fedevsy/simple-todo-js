@@ -24,7 +24,7 @@ function saveCoords(coordsObj){
     localStorage.setItem(COORDS, JSON.stringify(coordsObj));
 }
 
-function handleGeoSucces(position){
+function handleGeoSuccess(position){
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     const coordsObj = {
@@ -40,7 +40,7 @@ function handleGeoError(){
 }
 
 function askForCoords(){
-    navigator.geolocation.getCurrentPosition(handleGeoSucces, handleGeoError);
+    navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
 }
 
 function loadCoords(){
@@ -55,6 +55,10 @@ function loadCoords(){
 
 function init(){
     loadCoords();
+    setTimeout(function() {
+        weatherIcon.style.opacity = '1';
+    }, 200);
+    
 }
 
 init();
