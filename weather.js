@@ -12,11 +12,11 @@ function getWeather(lat, lon){
             return response.json();
         })
         .then(function(json){
-          const data = json;
-          const temp = data.main.temp;
-          const weathers = data.weather[data.weather.length -1];
-          weatherIcon.src = `https://openweathermap.org/img/wn/${weathers.icon}@2x.png`;
-          weatherSpan.innerHTML = `${temp}&#176;C ${weathers.main}`;
+            const data = json;
+            const temp = data.main.temp;
+            const weathers = data.weather[data.weather.length -1];
+            weatherIcon.src = `https://openweathermap.org/img/wn/${weathers.icon}@2x.png`;
+            weatherSpan.innerHTML = `${temp}&#176;C ${weathers.main}`;
         });
 }
 
