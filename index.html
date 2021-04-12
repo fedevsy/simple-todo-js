@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Something</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <header id="header">
+        <div class="js-weather">
+            <img class="weather-icon" alt="현재날씨">
+            <span class="weather-span"></span>
+        </div>
+        <div class="js-clock">
+            <h3 class="full-date">0000.00.00 Day</h3>
+            <h2 class="time">00:00</h2>
+        </div>
+    </header>
+    <main id="main">
+        <form class="js-form form">
+            <input class="input" type="text" placeholder="당신의 이름을 알려주세요." />
+        </form>
+        <h4 class="js-greetings greetings"></h4>
+        <form class="js-toDoForm todo-form">
+            <input class="input" type="text" placeholder="오늘의 할 일을 적어주세요." />
+        </form>
+    </main>
+    <ul class="js-toDoList todo-list">
+    </ul>
+    <script src="clock.js"></script>
+    <script src="gretting.js"></script>
+    <script src="weather.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+</body>
+
+</html>
